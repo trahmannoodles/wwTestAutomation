@@ -9,26 +9,33 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class workshopSearchPageSteps extends BaseClass{
+public class workshopSearchPageSteps {
+	
+	public BaseClass baseClass = new BaseClass();
+	public workshopSearchPage searchPage = new workshopSearchPage();
+	public workshopDetailsPage detailsPage = new workshopDetailsPage();
 	
     @Before
     public void setup(){
-        setDriver();
+        baseClass.setDriver();
     }
 
     @After
     public void teardown(){
-       closeDriver();
+    	baseClass.closeDriver();
     }
 	
     @Given("^that user navigates to workshop search page$")
     public void that_user_navigates_to_workshop_search_page() throws Throwable {
-    	workshopSearchPage.navigateToSearchPage();
+    	searchPage.navigateToSearchPage();
     }
 
     @When("^user clicks on studio tab for find your workshop cta$")
     public void user_clicks_on_studio_tab_for_find_your_workshop_cta() throws Throwable {
-
+    	searchPage.clickTab();
+//    	if(searchPage.getWorkshopStudioOption().isEnabled()) {
+//    		searchPage.getWorkshopStudioOption().click();
+//    	};
     }
     
     @And("^enters (.+) in search field$")

@@ -50,4 +50,9 @@ public class workshopSearchPage extends BaseClass implements workshopSearchPageL
 	    
 	    Assert.assertEquals(driver.getTitle().replaceAll("[^a-zA-Z0-9]", " "), "Find WW Studios & Meetings Near You | WW USA".replaceAll("[^a-zA-Z0-9]", " "));
 	}
+	
+	public void clickTab() {
+		getWorkshopStudioOption().click();
+	}
+
 }
