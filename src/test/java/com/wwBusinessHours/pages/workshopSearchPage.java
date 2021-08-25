@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.wwBusinessHoursAutomation.locators.*;
+import com.wwBusinessHours.locators.*;
 
 public class workshopSearchPage extends BaseClass implements workshopSearchPageLoc{
 	

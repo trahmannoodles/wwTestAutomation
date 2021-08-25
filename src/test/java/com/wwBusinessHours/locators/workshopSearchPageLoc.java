@@ -1,4 +1,4 @@
-package com.wwBusinessHoursAutomation.locators;
+package com.wwBusinessHours.locators;
 
 public interface workshopSearchPageLoc{
 	//Find your workshop CTA
